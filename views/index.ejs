@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Shear</title>
+    <link rel="stylesheet" href="/Bootstarp/bootstrap.css">
+    <link rel="stylesheet" href="/Bootstarp/style.css">
+</head>
+
+<body>
+
+    <div class="container border border-warning my-4 py-4">
+
+        <div class="container"> <br />
+            <div class="row">
+
+                <div class="col-md-7">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><strong>Upload files</strong> <small> </small></div>
+                        <div class="panel-body">
+                            <div class="input-group image-preview">
+                                <input placeholder="" type="text" class="form-control image-preview-filename"
+                                    disabled="disabled">
+                                <!-- don't give a name === doesn't send on POST/GET -->
+                                <span class="input-group-btn">
+                                    <!-- image-preview-clear button -->
+                                    <button type="button" class="btn btn-default image-preview-clear"
+                                        style="display:none;"> <span class="glyphicon glyphicon-remove"></span> Clear
+                                    </button>
+                                    <!-- image-preview-input -->
+                                    <div class="btn btn-default image-preview-input"> <span
+                                            class="glyphicon glyphicon-folder-open"></span>
+                                        <span class="image-preview-input-title" id="Browse">Browse</span>
+                                        <input type="file" multiple name="file" id="file" />
+                                        <!-- rename it -->
+                                    </div>
+                                    <button type="button" id='upload'
+                                        class="btn btn-labeled btn-default bg-success text-secondary-emphasis"> <span
+                                            class="btn-label"><i class="glyphicon glyphicon-upload"></i>
+                                        </span class="text-secondary-emphasis">Upload</button>
+                                </span>
+                            </div>
+                            <!-- /input-group image-preview [TO HERE]-->
+
+                            <br />
+                            <!-- Drop Zone -->
+                            <div class="upload-drop-zone" id="drop-zone"> Or drag and drop files here </div>
+                            <br />
+                            <!-- Progress Bar -->
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                    aria-valuemax="100" style="width: 0%;" id="progress_bar"> <span class="sr-only"
+                                        id="progress_text">60% Complete</span>
+                                </div>
+                            </div>
+                            <br />
+                            <!-- Upload Finished -->
+                            <div class="js-upload-finished">
+                                <h4>Upload Files</h4>
+                                <div class="list-group py-3" id="show_files">
+                                    <h3>Sorr select you files</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5" id="fetch_show_file"></div>
+                <div class="mybtn">
+                    <button class="btn btn-primary">Add line</button>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+    <!-- /container -->
+
+
+    </div>
+
+
+    <script src="/Bootstarp/bootstrap.js"></script>
+    <script src="/script/index.js"></script>
+
+</body>
+
+</html>
